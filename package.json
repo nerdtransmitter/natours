@@ -1,0 +1,23 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Landing page for natours",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch sass:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nerdtransmitter/starter.git"
+  },
+  "author": "alessia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nerdtransmitter/starter/issues"
+  },
+  "homepage": "https://github.com/nerdtransmitter/starter#readme",
+  "devDependencies": {
+    "sass": "^1.62.1"
+  }
+}
