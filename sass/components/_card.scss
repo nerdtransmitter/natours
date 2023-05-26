@@ -1,12 +1,13 @@
 .card {
-  // perspective goes on parent element
+  // FOR FUNCTIONALITY
   perspective: 150rem;
   -moz-perspective: 150rem;
+  // perspective goes on parent element
   position: relative;
   height: 50rem;
 
   &__side {
-    color: #fff;
+    color: #000;
     font-size: 2rem;
 
     height: 50rem;
@@ -34,10 +35,30 @@
   }
 
   &:hover &__side--front {
-    transform: rotateY(180deg);
+    // rotate opposite direction
+    transform: rotateY(-180deg);
   }
 
   &:hover &__side--back {
     transform: rotateY(0);
+  }
+
+  // FRONT CARD STYLING
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+
+    &--1 {
+      background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/nat-5.jpg);
+      // only one level bc will be compiled in main.css
+    }
+
+    &--2 {
+      background-image: url(../img/nat-5.jpg);
+    }
+    &--3 {
+      background-image: url(../img/nat-5.jpg);
+    }
   }
 }
