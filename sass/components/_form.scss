@@ -22,7 +22,7 @@
       &:invalid {
         border-bottom: 3px solid $color-secondary-dark;
       }
-      
+
       &:valid {
         border-bottom: 3px solid $color-primary;
       }
@@ -35,6 +35,17 @@
 
 
   &__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: .7rem;
+    display: block;
+    transition: all .3s;
+  }
 
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
   }
 }
