@@ -486,6 +486,17 @@ body {
   opacity: 1;
 }
 
+.popup {
+  display: block;
+  z-index: 2500;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.popup__content {
+  z-index: 3000;
+}
+
+@trwt c;
 .story {
   width: 90%;
   margin: 0 auto;
