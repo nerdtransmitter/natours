@@ -1,5 +1,5 @@
 .story {
-  width: 90%;
+  width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba($color-black, .1);
   background-color: rgba($color-white, .6);
@@ -9,6 +9,30 @@
   font-size: $default-font-size;
   transform: skewX(-12deg);
   position: relative;
+
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+
+    & > * {
+      transform: skewX(12deg);
+    }
+
+    &__text {
+      transform: skewX(12deg);
+    }
+
+    &__shape {
+      transform: skewX(12deg) translateX(-4.5rem) !important;
+    }
+  }
+
+  @include respond(phone) {
+    transform: skewX(0);
+
+    & > * { transform: skewX(0) !important; }
+  }
 
   & > * {
     transform: skewX(12deg);
@@ -23,6 +47,10 @@
     clip-path: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
+
+    @include respond(phone) {
+      transform: translateX(-3rem) skewX(0) !important;
+    }
   }
 
   &__img {
@@ -32,6 +60,10 @@
 
   &__text {
     transform: skewX(12deg);
+
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
 
   &__caption {
