@@ -668,9 +668,20 @@ body {
   transform: translate(-50%, -50%) scale(0.25);
   transition: all 0.4s 0.2s;
 }
+@media (max-width: 75em) {
+  .popup__content {
+    display: block;
+  }
+}
 .popup__left {
   width: 33.333333%;
   display: table-cell;
+}
+@media (max-width: 75em) {
+  .popup__left {
+    display: flex;
+    width: 100%;
+  }
 }
 .popup__right {
   width: 66.666667%;
@@ -681,6 +692,11 @@ body {
 .popup__img {
   display: block;
   width: 100%;
+}
+@media (max-width: 75em) {
+  .popup__img {
+    width: 50%;
+  }
 }
 .popup__text {
   font-size: 1.4rem;
