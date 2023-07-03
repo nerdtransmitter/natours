@@ -388,6 +388,17 @@
             </div>
           </div>
         </div>
+
+        <script>
+          const navButton = document.getElementById("navi-toggle");
+          const navLinks = document.querySelectorAll(".navigation__link");
+
+          Array.from(navLinks).forEach(link =>
+            link.addEventListener("click", () => {
+              navButton.checked = false;
+            })
+          );
+        </script>
         <!-- <section class="grid-test">
           <div class="row">
             <div class="col-1-of-2">
@@ -455,5 +466,6 @@
             </div>
           </div>
         </section> -->
+
     </body>
 </html>
